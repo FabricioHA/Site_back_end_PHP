@@ -1,0 +1,191 @@
+/*Cards Tela Libras Front-End*/
+.card-librasL
+{
+  background: #dbdbdb; 
+  text-align: justify; 
+  border-radius: 10px 0px 0px 10px;
+}
+.card-librasL #ConteudoLiL
+{
+  padding: 20px 50px 50px 50px;
+}
+.card-librasL p
+{
+  padding-top: 30px;
+}
+.card-librasR
+{
+  background: #1a0943; 
+  text-align: justify; 
+  border-radius: 0px 10px 10px 0px;
+}
+.card-librasR img
+{
+  padding: 10px 0px 0px 150px;	
+}
+.card-librasR p
+{
+  padding: 40px 0px 0px 190px;
+  color: white;
+}
+/*Fim Cards Tela Libras Front-End*/
+
+/*Cards Tela Suspeito Front-End*/
+.card-susL
+{
+  background: #dbdbdb; 
+  text-align: justify; 
+  border-radius: 10px 0px 0px 10px;
+}
+.card-susL #ConteudoSuL
+{
+  padding: 20px 50px 50px 50px;
+}
+.card-susL p
+{
+  padding-top: 10px;
+}
+.card-susR
+{
+  background: #3cd014; 
+  text-align: justify; 
+  border-radius: 0px 10px 10px 0px;
+}
+.card-susR img
+{
+  padding: 10px 0px 0px 150px;	
+}
+.card-susR p
+{
+  padding: 40px 0px 0px 190px;
+  color: white;
+}
+/*Fim Cards Tela Suspeito Front-End*/
+
+/*Box*/
+.white-box
+{
+  border-radius: 10px;
+  border-color: #eee;
+  background-color: white;
+}
+.black-box
+{
+  border-radius: 10px;
+  border-color: #eee;
+  background: #000;
+}
+.grey-box
+{
+  padding: 5px;
+  max-width: auto;
+  border-radius: 10px;
+  border-color: #000;
+  background-color: #dbdbdb;
+}
+.grey-box p
+{
+  font-size: 15px;
+  text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #525252;
+}
+/*End Box*/
+
+/*Message Box*/
+.msgBox 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 500px;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #eee;
+  color: white;
+}
+
+.msgBox p 
+{
+  line-height: 1.5;
+  padding: 10px;
+  color:black;
+  padding-left: 80px;
+  background-position: 25px, center;
+  background-repeat: no-repeat;
+}
+
+.msgBox button 
+{
+  margin-left: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+.msgBox button:hover
+{
+  color: black;
+}
+/*End Message Box*/
+
+/*layout de colunas cetralizadas*/
+.lay-colunm-center
+{
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+}
+.lay-colunm-center p
+{
+  padding-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+.lay-colunm-center img
+{
+  padding-left: 150px;
+  padding-top: 30px;
+}
+/*End layout de colunas cetralizadas*/
+
+/*Ajustar iformações "responderAdmin"*/
+.ajustar-res
+{
+  word-break: break-all;
+  text-align: justify;
+}
+/*Fim ajustar iformações "responderAdmin"*/
+
+/*Navbar index*/
+.menu-nav ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.menu-nav li{float: left;}
+
+.menu-nav li a 
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu-nav li a:hover {background-color: #111;}
+/*Fim Navbar index*/

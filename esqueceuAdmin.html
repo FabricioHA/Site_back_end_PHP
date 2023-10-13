@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="background-esq esconder-scrollBars">
+<head>
+
+	<!--Compatibilidade de navegadores-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!--Titulo de Aba-->
+	<title>Esqueceu Senha</title>
+	
+	<!--Script Javascript-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+	<script src="Javascript/funcoes_javascript.js"></script>
+	
+	<!--Estilo CSS-->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bulma.css"/>
+	
+	<style>
+	.background-esq
+	{
+		background: #f3f3f3;
+		background-size: cover;
+	}
+	.esconder-scrollBars
+	{
+		overflow-y: hidden;
+	}
+	.ajust-esq
+	{
+		padding-top: 110px;
+	}
+	</style>
+
+</head>
+<body>
+	
+	<div class="hero">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<div class="column is-4 is-offset-4 ajust-esq">
+					
+					<div style="box-shadow: 100%">
+					    <p class="title has-text-grey">Recuperar Senha</p>
+						<div class="box">
+
+							<p class="subtitle is-4 has-text-info">Digite seu E-mail</p>
+							
+							<form id="Esqueceu" method="POST">
+								<div class="field">
+									<div class="control">
+										<input type="email" name="email" class="input" placeholder="Digite seu E-mail" autofocus="">
+									</div>
+								</div>
+
+								<button type="submit" name="submit" name="enviar" id="enviar" class="button is-block is-link is-large is-fullwidth">Enviar</button>
+							</form>
+							<div id="resultado"></div>
+						</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+        $(document).ready(function() 
+        {
+            $('#enviar').click(function() 
+            {
+                var dadosEsqueceu = $('#Esqueceu').serialize();
+				
+                $.ajax(
+                {
+                    method: 'POST',
+                    url: 'PHP/esqueceuAdmin.php',
+                    data: dadosEsqueceu,
+
+                    beforeSend: function() 
+                    {
+                      document.getElementById('enviar').className = "button is-block is-link is-large is-fullwidth is-loading";
+                    }
+                })
+
+                .done(function(resultado)
+                {
+					document.getElementById('enviar').className = "button is-block is-link is-large is-fullwidth";
+					
+					if(resultado == "1")
+					{
+						exibir_mensagem('Senha enviada com sucesso!', 'success', 'LoginAdmin.html');
+					}
+					else
+					{
+						exibir_mensagem("E-mail inválido ou inexistente!", "error");
+					}
+                })
+
+                .fail(function()
+                {
+                    document.getElementById('enviar').className = "button is-block is-link is-large is-fullwidth";
+                    exibir_mensagem("Erro ao conectar-se com Script!", "error");
+                })
+
+                return false;
+            });
+        });
+    </script>
+	
+</body>
+</html>
